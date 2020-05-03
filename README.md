@@ -1,6 +1,6 @@
 # personal_expenses
 
-A new Flutter project.
+A new Flutter project from https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/ online course.
 
 ## Getting Started
 
