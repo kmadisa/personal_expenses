@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:personal_expenses/widgets/transaction_list.dart';
@@ -121,7 +123,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ? Row(
                     children: <Widget>[
                       Text("Show Chart"),
-                      Switch(
+                      Switch.adaptive(
+                        activeColor: Theme.of(context).accentColor,
                         value: _showChart,
                         onChanged: (val) {
                           setState(() {
@@ -152,10 +155,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () => _startAddNewTransaction(context),
-      ),
+      floatingActionButton: Platform.isIOS
+          ? Container()
+          : FloatingActionButton(
+              child: Icon(Icons.add),
+              onPressed: () => _startAddNewTransaction(context),
+            ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
