@@ -105,7 +105,6 @@ class _NewTransactionState extends State<NewTransaction> {
             ],
             crossAxisAlignment: CrossAxisAlignment.end,
           ),
-          padding: EdgeInsets.all(10),
         ),
         elevation: 5,
       ),
