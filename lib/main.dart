@@ -85,9 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
         });
   }
 
-  void _deleteTransaction(int index) {
+  void _deleteTransaction(String id) {
     setState(() {
-      _userTransactions.removeAt(index);
+      _userTransactions.removeWhere((transaction) => transaction.id == id);
     });
   }
 
