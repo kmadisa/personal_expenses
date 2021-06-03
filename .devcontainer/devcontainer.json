@@ -1,0 +1,29 @@
+{
+	"name": "flutter_complete_guide",
+	"context": ".",
+	"dockerFile": "Dockerfile",
+	"remoteUser": "developer",
+	"mounts": [
+		"source=/dev/bus/usb,target=/dev/bus/usb,type=bind"
+	],
+	"postCreateCommand": "flutter pub get",
+	"settings": {
+		"terminal.integrated.shell.linux": "/usr/bin/fish",
+		"dart.previewFlutterUiGuides": true,
+		"dart.previewFlutterUiGuidesCustomTracking": true,
+		"editor.formatOnSave": true,
+	},
+	"runArgs": ["--privileged", "--net=host"],
+	"extensions": [
+		"cschleiden.vscode-github-actions",
+		"dart-code.flutter",
+		"eamodio.gitlens",
+		"albert.tabout",
+		"jeroen-meijer.pubspec-assist",
+		"coenraads.bracket-pair-colorizer-2",
+		"aaron-bond.better-comments",
+		"gruntfuggly.todo-tree",
+	],
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/home/developer/flutter_complete_guide,type=bind,consistency=delegated",
+	"workspaceFolder": "/home/developer/flutter_complete_guide/"
+}
