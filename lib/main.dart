@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
         children: <Widget>[
           Text(
             "Show Chart",
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.headline6,
           ),
           Switch.adaptive(
             activeColor: Theme.of(context).accentColor,
